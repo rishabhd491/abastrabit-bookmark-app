@@ -205,6 +205,9 @@ export default function Home() {
 
     setError(null);
 
+    const previous = bookmarks;
+    setBookmarks((current) => current.filter((bookmark) => bookmark.id !== id));
+
     const { error } = await supabase
       .from("bookmarks")
       .delete()
@@ -213,6 +216,7 @@ export default function Home() {
 
     if (error) {
       setError(error.message);
+      setBookmarks(previous);
     }
   }
 
