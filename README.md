@@ -57,7 +57,7 @@ In your Supabase project:
 - Go to **Authentication → Providers → Google** and turn it on.
 - Set the redirect URLs (can be relaxed to the domain origin):
   - Local: `http://localhost:3000`
-  - Production: your Vercel URL, for example `https://smart-bookmark.vercel.app`
+  - Production: your Vercel URL, for example `https://abastrabit-bookmark-app.vercel.app/`
 
 Make sure the same values (especially the production URL) are used in Vercel as the `SITE_URL` (Project Settings → Authentication → URL configuration).
 
